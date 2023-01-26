@@ -1,0 +1,113 @@
+@use "../global" as global;
+
+html {
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	line-height: var(--line-height-base);
+}
+
+body {
+	font-family: var(--body-font);
+	font-size: global.$font-size-base;
+	font-weight: 400;
+	font-feature-settings: "palt";
+	line-height: var(--line-height-base);
+	background: var(--bg-base);
+	overflow-x: hidden;
+}
+
+p {
+	font-size: global.$body-font-size;
+	color: var(--color-base);
+}
+
+h1 {
+	font-size: global.$font-size-h1;
+}
+
+h2 {
+	font-size: global.$font-size-h2;
+}
+
+h3 {
+	font-size: global.$font-size-h3;
+}
+
+h4 {
+	font-size: global.$font-size-h4;
+}
+
+h5 {
+	font-size: global.$font-size-h5;
+}
+
+h6 {
+	font-size: global.$font-size-h6;
+}
+
+a {
+	color: global.$link-color;
+	transition: opacity .5s;
+	word-break: break-all;
+	&:hover {
+		text-decoration: none;
+		cursor: pointer;
+		opacity: 0.8;
+	}
+}
+
+dt, dd {
+	font-size: global.$body-font-size;
+}
+
+input:not([class]) {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-radius: 0;
+	color: inherit;
+	font-family: inherit;
+	font-size: 1em;
+	padding: 0.4em 0.8em;
+	width: 100%;
+}
+
+textarea:not([class]) {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-radius: 0;
+	color: inherit;
+	font-family: inherit;
+	font-size: 1em;
+	height: 100px;
+	padding: 0.4em 0.8em;
+	width: 100%;
+}
+
+button {
+	-webkit-appearance: button;
+	background-color: transparent;
+	border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+	border-style: solid;
+	border-width: 1px;
+	padding: 1px 7px 2px;
+	text-rendering: auto;
+	color: initial;
+	display: inline-block;
+	text-align: start;
+	margin: 0em;
+	font: 400 11px system-ui;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+}

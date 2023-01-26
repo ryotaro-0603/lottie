@@ -1,0 +1,316 @@
+@use "../global" as global;
+
+.p-form {
+    display: block;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.p-form + .p-form {
+    margin-top: 2.5rem;
+    @include global.responsive(md) {
+        margin-top: 5rem;
+    }
+}
+
+.mw_wp_form_input .cf-block-lead {
+    display: block;
+}
+
+.mw_wp_form_confirm .cf-block-lead {
+    display: none;
+}
+
+.mw_wp_form_input .p-form__text--thanks {
+    display: block;
+}
+
+.mw_wp_form_confirm .p-form__text--thanks {
+    display: none;
+}
+
+.mw_wp_form_confirm .p-form__desc.w-30 {
+    margin-top: 0.75rem;
+    margin-left: 1rem;
+    width: 20%;
+    font-size: 14px;
+    @include global.responsive(md) {
+        margin-left: 0;
+    }
+}
+
+.entry-content .mw_wp_form_complete .p-form__text--completion--title {
+    font-size: 24px;
+    flex-basis: 700px;
+    color: var(--color-primary);
+    margin-bottom: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.entry-content .mw_wp_form_complete .p-form__text--completion {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.p-form__list {
+    display: block;
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--color-primary);
+    @include global.responsive(md) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 40px 0;
+    }
+}
+
+.p-form__title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    @include global.responsive(md) {
+        flex: 0 0 260px;
+        width: 260px;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+}
+
+.p-form__title .p-form__required {
+    font-weight: 400;
+    font-size: 12px;
+    background-color: var(--color-primary);
+    color: var(--white-color-primary);
+    padding: 0 15px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.p-form__title .p-form__any {
+    font-weight: 400;
+    font-size: 12px;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 0 15px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.entry-content .p-form .p-form__title p {
+    font-weight: 400;
+    margin: 0;
+    flex-shrink: 0;
+    @include global.responsive(md) {
+        width: 190px;
+    }
+}
+
+.entry-content .p-form .p-form__list {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.entry-content .p-form__answer .p-form__desc {
+    width: 100%;
+    margin-bottom: .75rem;
+}
+
+.p-form__answer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @include global.responsive(md) {
+        width: calc(100% - 280px);
+    }
+}
+
+.p-form__answer input[type="text"], 
+.p-form__answer input[type="email"],
+.p-form__answer textarea {
+    border-color: var(--color-primary);
+}
+
+.p-form__answer select,
+.p-form__answer .hasDatepicker,
+.p-form__answer input[type="text"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid var(--color-primary);
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    padding: 0.4em 0.8em;
+    margin-right: 0;
+    width: 100%;
+}
+
+.p-form__answer input[type="radio"],
+.p-form__answer input[type="checkbox"],
+.p-form__policy input[type="checkbox"] {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%); 
+    margin: -1px;
+}
+
+
+.p-form__answer input[type="text"].w-30,
+.p-form__answer select.w-30,
+.p-form__answer .p-form__desc.w-30  {
+    @include global.responsive(md) {
+        width: 30%;
+        margin-right: 20px;
+    }
+}
+
+.p-form__answer input[type="text"].w-90 {
+    width: 80%;
+    margin-right: 20px;
+    @include global.responsive(md) {
+        width: 30%;
+    }
+}
+
+.p-form__answer input[type="text"].w-70 {
+    @include global.responsive(md) {
+        width: calc(70% - 20px);
+        margin-right: 0;
+    }
+}
+
+.p-form__answer .mwform-checkbox-field span,
+.p-form__policy .mwform-checkbox-field span {
+    cursor: pointer;
+    padding-left: 30px;
+    position: relative;
+}
+
+.p-form__answer .mwform-checkbox-field span::before,
+.p-form__answer .mwform-checkbox-field span::after,
+.p-form__policy .mwform-checkbox-field span::before,
+.p-form__policy .mwform-checkbox-field span::after {
+    content: "";
+    display: block; 
+    position: absolute;
+}
+
+.p-form__answer .mwform-checkbox-field span::before,
+.p-form__policy .mwform-checkbox-field span::before {
+    background-color: #fff;
+    border-radius: 0%;
+    border: 1px solid var(--color-primary);
+    width: 16px;
+    height: 16px;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 5px;
+}
+
+.p-form__answer .mwform-checkbox-field span::after,
+.p-form__policy .mwform-checkbox-field span::after {
+    border-bottom: 2px solid var(--color-primary);
+    border-left: 2px solid var(--color-primary);
+    opacity: 0;
+    height: 5px;
+    width: 10px;
+    transform: rotate(-45deg);
+    top: 6px;
+    left: 8px;
+}
+
+.mwform-checkbox-field input:checked + span::after {
+    opacity: 1;
+}
+
+.mwform-radio-field span {
+    cursor: pointer;
+    padding-left: 30px;
+    position: relative;
+}
+
+.mwform-radio-field span::before,
+.mwform-radio-field span::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(-45%);
+    top: 50%;
+}
+
+.mwform-radio-field span::before {
+    background-color: #fff;
+    border: 1px solid var(--color-primary);
+    height: 16px;
+    width: 16px;
+    left: 5px;
+}
+
+.mwform-radio-field span::after {
+    background-color: var(--color-primary);
+    opacity: 0;
+    height: 8px;
+    width: 8px;
+    left: 9px;
+}
+
+.mwform-radio-field input:checked + span::after {
+    opacity: 1;
+}
+
+.mw_wp_form .horizontal-item {
+    margin-right: 20px;
+    margin-left: 0 !important;
+}
+
+.p-form__answer > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.p-form__answer select {
+    -webkit-appearance: none;
+    appearance: none; /* デフォルトのスタイルを無効 */
+    position: relative;
+}
+
+.p-form__answer select::-ms-expand {
+    display: none; /* デフォルトのスタイルを無効(IE用) */
+}
+
+/* セレクトボックスの矢印デザイン変更 */
+.p-form__answer select::before {
+    border-bottom: 4.5px solid red;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    content: "";
+    position: absolute;
+    right: 9px;
+    top: 10px;
+    width: 0;
+}
+
+.p-form__answer select::after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4.5px solid red;
+    content: "";
+    position: absolute;
+    right: 9px;
+    top: 21px;
+    width: 0;
+}
