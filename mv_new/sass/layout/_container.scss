@@ -1,0 +1,19 @@
+@use "../global" as global;
+
+.l-container {
+  width: 100%;
+  padding: 0 4vw;
+  @include global.responsive(md) {
+    max-width: 1000px;
+    padding: 40px;
+    margin: 0 auto;
+  }
+}
+
+.l-container--full {
+  width: 100%;
+  padding: 0 4vw;
+  @include global.responsive(md) {
+    padding: 40px;
+  }
+}
